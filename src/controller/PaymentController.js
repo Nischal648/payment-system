@@ -1,3 +1,9 @@
+//entry point of the payment flow 
+//receives request from client 
+//choose gateway
+//delegates work to service
+
+
 const PaymentService = require("../service/PaymentService");
 const GatewayFactory = require ("../factory/GatewayFactory") ;
 

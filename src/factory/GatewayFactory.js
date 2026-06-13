@@ -1,6 +1,15 @@
+
 const PaytmGateway = require("../gateway/PaytmGateway");
 const RazorpayGateway = require("../gateway/razporpayGateway");
 const GatewayType = require("./gatewayType");
+
+//singleton factory
+//responsibility
+//return the correct gateway object 
+//client does not need to know 
+//new PaytmGateway()
+//new RazorpayGateway()
+//factory creates them 
 
 class GatewayFactory{
     static instance;

@@ -1,3 +1,9 @@
+//businees layer
+//controller talks to service 
+//service takls to gateway 
+//keep controller clean
+
+
 class PaymentService {
 setGateway(paymentGateway){
     this.paymentGateway=paymentGateway
