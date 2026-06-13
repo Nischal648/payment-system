@@ -1,6 +1,6 @@
 //abstract class 
 class BankingSystem{
-    processPaymnet(amount){
+    processPayment(amount){
         throw new Error("processPayment() msut be implemented ")
 
     }
