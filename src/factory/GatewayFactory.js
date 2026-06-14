@@ -11,7 +11,11 @@ const GatewayType = require("./gatewayType");
 //new RazorpayGateway()
 //factory creates them 
 
+//singleton -> it prevents multiple objects from being created
+//and make sure the entire application uses the shared instance 
+
 class GatewayFactory{
+    //the static varible belongs to the class itself , not to any object 
     static instance;
 
     static getInstance(){
@@ -20,6 +24,7 @@ class GatewayFactory{
         }
         return GatewayFactory.instance;
     }
+//here i am passing the value  for selecting the gateway whether paytm and razorpay 
 
     getGateway(type){
         switch(type){

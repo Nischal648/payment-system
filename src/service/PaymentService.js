@@ -12,6 +12,7 @@ processPayment(PaymentRequest){
     if(!this.paymentGateway){
         throw new Error("gateway not set")
     }
+    
     this.paymentGateway.processPayment(PaymentRequest);
 }
 }

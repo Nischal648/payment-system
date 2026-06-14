@@ -4,6 +4,8 @@ const PaytmBankingSystem = require("../banking/PaytmBankingSystem")
 class PaytmGateway extends PaymentGateway{
     constructor(){
         //inject paytm banking system
+        //super ->  is used in a child class to acess the parent class constrcutor and methods 
+        // it helps reuse the parent class fucntionality instead of rewriting it     
         super(new PaytmBankingSystem());
     }
 
