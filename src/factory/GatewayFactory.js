@@ -1,5 +1,5 @@
 
-const PaytmGateway = require("../gateway/PaytmGateway");
+const PaytmGateway = require("../gateway/paytmGateway");
 const RazorpayGateway = require("../gateway/razporpayGateway");
 const GatewayType = require("./gatewayType");
 
@@ -20,15 +20,20 @@ class GatewayFactory{
 
     static getInstance(){
         if(!GatewayFactory.instance){
+            //creating object for gateway factory
+            console.log(GatewayFactory.instance)
+            //gateway factory object created 
             GatewayFactory.instance = new GatewayFactory();
         }
+        console.log(GatewayFactory.instance)
         return GatewayFactory.instance;
     }
 //here i am passing the value  for selecting the gateway whether paytm and razorpay 
 
     getGateway(type){
         switch(type){
-            case GatewayType.PAYTM:
+            case GatewayType.PAYTM:     
+             //paytm gateway project created 
                 return new PaytmGateway();
 
             case GatewayType.RAZORPAY:

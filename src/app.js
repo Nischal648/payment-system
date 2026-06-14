@@ -3,11 +3,9 @@
 const PaymentController = require("./controller/PaymentController");
 const PaymentRequest = require("./models/PaymentRequest")
 const GatewayType = require("./factory/gatewayType");
-const PaymentRequest = require("./models/PaymentRequest");
-
 const controller = new PaymentController();
 
-const PaymentRequest = new PaymentRequest(
+const paymentRequest = new PaymentRequest(
     "Nischal",
     "merchant",
     15000000000,
@@ -16,5 +14,5 @@ const PaymentRequest = new PaymentRequest(
 
 controller.handelPayment(
     GatewayType.PAYTM,
-    PaymentRequest
+    paymentRequest
 )

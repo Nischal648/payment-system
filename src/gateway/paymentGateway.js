@@ -25,4 +25,4 @@ class PaymentGateway{
 
 }
 
-module.export = PaymentGateway;
+module.exports = PaymentGateway;

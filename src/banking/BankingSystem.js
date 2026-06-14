@@ -8,4 +8,4 @@ class BankingSystem{
 
     }
 }
-module.export = BankingSystem;
+module.exports = BankingSystem;
