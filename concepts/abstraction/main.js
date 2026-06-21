@@ -1,12 +1,14 @@
 class atm{
     constructor(balance,pin){
+        //this will point to the current object of atm 
         this.balance = balance;
         this.pin = pin;
+        console.log(this.balance,this.pin)
     }
-    //public mehtod
-    //user only access this method 
+    //public mehtod (the abstract interface)
+    //this is th only method that user sees and interact with 
     withdrawMoney(amount,enterdPin){
-        //internal step
+        //this will call the private method #verify pin 
         if(!this.#verifyPin(enterdPin)){
             console.log("invalid pin");
             return;
@@ -18,12 +20,13 @@ class atm{
         }
         //internal step 3
         this.#deductBalance(amount);
+        console.log()
         //internal step 4 
         this.#dispenceCash(amount);
         //internal step 5
         this.#printRecipt(amount);
     }
-    //private methods hidden for users 
+    //#means creating a private method 
     #verifyPin(enteredPin){
         return this.pin === enteredPin;
     }
@@ -41,6 +44,6 @@ class atm{
         console.log(`remainig balance ${this.balance}`)
     }
 }
-
+//creating an object 
 const atm1 = new atm(10000,1234)
 atm1.withdrawMoney(2000,1234);

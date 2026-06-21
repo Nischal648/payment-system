@@ -1,6 +1,6 @@
 encapsulation
 
- -> all the characters and behaviours are present indside the same class
+ -> all the characters and behaviours are present inside the same class
   varibles-> characters 
   methods-> behaviours
  ->data security 
@@ -10,4 +10,12 @@ encapsulation
 
  -> so here comes the concept of access modifier 
    -> public private protected 
-   f
+   
+
+   this keyword 
+   ->'this' references the permanent property stored on the object.
+
+
+   ->To Store Data: Assign values to the instance during creation (this.property = value).
+   ->To Share Data: Read properties across different methods inside the same class (this.checkBalance()).
+   ->To Call Methods: Run another function belonging to the same object (this.verifyPin()).

@@ -45,4 +45,4 @@ history of programming
 
      -for example -> when you drive the car you use accelartor,break,gear,clutch then and you do not need to know how everything is working internally 
 
-     -so abstraction unncessary details from the client(the one who is using the object ) and showcase only what is necessaryf
+     -so abstraction unncessary details from the client(the one who is using the object ) and showcase only what is necessary
