@@ -43,9 +43,10 @@ class saving_account extends bank_account{
     
     return;
    }
+   console.log("remaing amount after the withdrawal")
    this.#balance-=amount;
    console.log(
-    `saving Account:withdraw ${amount}`
+    `saving Account:withdraw ${this.#balance}`
    );
 }
 //return current balance
