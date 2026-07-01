@@ -26,9 +26,11 @@ class saving_account extends bank_account{
     constructor(initialBalance){
         super();
         this.#balance = initialBalance;
+        console.log(`initial balance ${initialBalance}`)
     }
     //add money to account
     deposit(amount){
+        console.log(`you amount in deposit is ${amount}`)
         this.#balance+=amount;
         console.log(`saving Account ${amount}`)
     };    
@@ -61,6 +63,7 @@ class current_account extends bank_account{
     this.#balance=initialBalance;
    }
    deposit(amount){
+    
     if(this.#balance - amount <-5000){
         console.log("current draft limit reached ")
    
@@ -97,6 +100,9 @@ class atm{
 //main program 
 //create saving account 
 const saving  = new saving_account(10000);
+console.log("depositing money into saving account")
+ saving.deposit(100)
+ saving.withdraw(100)
 
 //create current account 
 const current = new current_account(100000);
@@ -105,10 +111,10 @@ const current = new current_account(100000);
 const atm1 = new atm();
 
 //deposit into the saving account
-atm1.depositMoney("saving",2000);
+saving.deposit("saving",2000);
 
 //withdraw from saving account
-atm1.withdrawMoney(current,10000);
+saving.withdraw(current,1000);
 
 //withdraw beyond overdraft limit
-atm1.withdraw(current,10000)
+atm1.withdrawMoney(current,10000)
